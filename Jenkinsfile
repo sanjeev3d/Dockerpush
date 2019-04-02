@@ -11,6 +11,8 @@ pipeline {
         stage('Dockersetup') {
         steps {
             sh '''
+                apt update
+                apt install sudo -y
                 sudo usermod -a -G docker root
                 '''
               }
