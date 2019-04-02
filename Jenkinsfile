@@ -8,11 +8,13 @@ pipeline {
         }
     }
     stages {
-        stage('Dockersetup')
+        stage('Dockersetup') {
         steps {
             sh '''
                 usermod -a -G docker $USER
                 '''
+              }
+        }
         stage('build') {
             steps {
                 script {
