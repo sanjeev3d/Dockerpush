@@ -12,6 +12,8 @@ pipeline {
             sh '''
                 apt update
                 apt install sudo -y
+                sudo usermod -aG docker root
+                sudo service docker status
                 sudo service docker start
                 '''
               }
