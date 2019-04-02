@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image 'sanjeev3d/docker:latest'
-            agrs  '-v /var/run/docker.sock:/var/run/docker.sock'
+            //agrs  '-v /var/run/docker.sock:/var/run/docker.sock'
             args  '-u root:sudo'
         }
     }
