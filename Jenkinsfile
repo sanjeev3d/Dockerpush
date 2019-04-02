@@ -15,6 +15,7 @@ pipeline {
                 sudo usermod -aG docker root
                 sudo service docker start
                 sudo service docker status
+                chmod 775 /var/run/docker.sock
                 '''
               }
         }
