@@ -11,7 +11,7 @@ pipeline {
         stage('Dockersetup') {
         steps {
             sh '''
-                usermod -a -G docker $USER
+                usermod -a -G docker root
                 '''
               }
         }
