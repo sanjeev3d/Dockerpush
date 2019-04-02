@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'sanjeev3d/ubuntu-docker'
+            image 'sanjeev3d/docker:latest'
             args  '-v /var/run/docker.sock:/var/run/docker.sock'
             args  '-u root:sudo'
         }
@@ -12,7 +12,6 @@ pipeline {
             sh '''
                 apt update
                 apt install sudo -y
-                sudo usermod -a -G docker root
                 sudo service docker start
                 '''
               }
