@@ -2,7 +2,6 @@ pipeline {
     agent {
         docker {
             image 'tutum/ubuntu'
-            args  '-u root:sudo'
         }
     }
     stages {
