@@ -14,6 +14,7 @@ pipeline {
                 apt update
                 apt install sudo -y
                 sudo usermod -a -G docker root
+                sudo service docker start
                 '''
               }
         }
