@@ -2,6 +2,7 @@ pipeline {
     agent {
         docker {
             image 'sanjeev3d/ubuntu-docker'
+            args  '-v /var/run/docker.sock:/var/run/docker.sock'
             args  '-u root:sudo'
             
         }
