@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'tutum/ubuntu'
+            image 'sanjeev3d/ubuntu-docker'
         }
     }
     stages {
