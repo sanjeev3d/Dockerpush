@@ -9,6 +9,7 @@ RUN apt-get update \
     && echo "daemon off;" >> /etc/nginx/nginx.conf
     
 VOLUME /var/run/docker.sock
+RUN chmod 777 /var/run/docker.sock
     
 
 EXPOSE 80
