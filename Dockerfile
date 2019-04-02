@@ -7,7 +7,8 @@ RUN apt-get update \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/* \
     && echo "daemon off;" >> /etc/nginx/nginx.conf
-VOLUME ["/var/run/docker.sock"]
+    
+VOLUME /var/run/docker.sock
     
 
 EXPOSE 80
